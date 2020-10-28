@@ -1,4 +1,4 @@
-# The Complete Python Masterclass (Udemy): Learn Python From Scratch
+# The Complete Python Masterclass: Learn Python From Scratch
 
 ## Complex Python Challenges
 
