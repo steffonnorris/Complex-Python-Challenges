@@ -83,13 +83,13 @@ r = StringVar()
 r.set('ft')
 
 R1 = Radiobutton(frame, text="ft", font=12, variable=r,
-                 value='ft', bg='gray')
+                 value='ft', bg='gray', relief=SUNKEN)
 R2 = Radiobutton(frame, text="in", font=12, variable=r,
-                 value='in', bg='gray')
+                 value='in', bg='gray', relief=SUNKEN)
 R3 = Radiobutton(frame, text="m", font=12, variable=r,
-                 value='m', bg='gray')
+                 value='m', bg='gray', relief=SUNKEN)
 R4 = Radiobutton(frame, text="cm", font=12, variable=r,
-                 value='cm', bg='gray')
+                 value='cm', bg='gray', relief=SUNKEN)
 
 R1.grid(row=0, column=1, padx=1)
 R2.grid(row=0, column=2, padx=1)
@@ -105,7 +105,6 @@ frame1.grid(row=1, column=0, pady=10)
 
 l = Label(frame1, text='Length', font=12, bg='lightgray')
 l1 = Label(frame1, text='Width', font=12, bg='lightgray')
-
 e = Entry(frame1, width=13, font=12, borderwidth=5,
           bg='gray')
 e1 = Entry(frame1, width=13, font=12, borderwidth=5,
@@ -129,7 +128,7 @@ frame2 = LabelFrame(root, text='Price',
 frame2.grid(row=3, column=0, pady=10)
 
 l2 = Label(frame2, text='$/sq.ft: ', font=12, bg='lightgray')
-e2 = Entry(frame2, width=13, font=12, bg='gray')
+e2 = Entry(frame2, width=13, font=12, bg='gray', borderwidth=5)
 
 l2.grid(row=3, column=0)
 e2.grid(row=3, column=1)
@@ -145,7 +144,8 @@ frame3 = LabelFrame(root, borderwidth=5,
 frame3.grid(row=4, column=0, padx=8, pady=10)
 
 l3 = Label(frame3, text='% of Price: ', font=12, bg='lightgray')
-e3 = Entry(frame3, width=10, font=12, bg='gray')
+e3 = Entry(frame3, width=10, font=12, bg='gray',
+           borderwidth=5)
 l3.grid(row=4, column=0)
 e3.grid(row=4, column=1)
 

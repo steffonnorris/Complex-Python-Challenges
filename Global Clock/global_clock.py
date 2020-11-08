@@ -99,11 +99,11 @@ lbl1.grid(row=0, column=1)
 frame2 = LabelFrame(root, text='Nairobi (GMT +3)',
                     font=('calibri', 14, 'bold'),
                     borderwidth=5, bg='black',
-                    fg='red', labelanchor=N,
+                    fg='green', labelanchor=N,
                     pady=10)
 frame2.grid(row=0, column=2, padx=5, pady=5)
 lbl2 = Label(frame2, font=('calibri', 28, 'bold'),
-             bg='darkblue', fg='white')
+             bg='darkred', fg='white')
 lbl2.grid(row=0, column=2)
 
 
