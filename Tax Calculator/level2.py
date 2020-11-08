@@ -64,7 +64,9 @@ def tax_calc():
         elif income > 100_000:
             tax = income * (0.4 + biz_tax)
 
-            
+    # result = f'Taxes Due: ${tax: ,.0f}'
+    # e2.configure(textvariable=result)
+
     messagebox.showinfo('Tax Calculator',
                         f'Taxes Due: ${tax: ,.0f}',
                         )
@@ -78,7 +80,6 @@ frame.grid(row=0, column=0, pady=5)
 r = StringVar()
 r.set('Individual')
 
-# Try using checkboxes instead
 R1 = Radiobutton(frame, text='Individual', font=14, variable=r,
                  value='Individual', bg='gray', padx=8,
                  borderwidth=5, relief=SUNKEN, command=age_set)
@@ -111,10 +112,21 @@ l1.grid(row=2, column=0)
 e1.grid(row=2, column=1)
 
 
-btn = Button(root, text='Calculate', bg='darkgreen',
-            fg='white', padx=15, pady=5, font=14,
-            command=tax_calc)
+btn = Button(root, text='Calculate', bg='green',
+            fg='white', padx=15, pady=5, font=28,
+            width=20, command=tax_calc)
 btn.grid(row=3, column=0, pady=2)
+
+frame3 = LabelFrame(root, bg='darkblue',
+                    borderwidth=3, padx=18,
+                    pady=5)
+frame3.grid(row=4, column=0, pady=2)
+l2 = Label(frame3, text='Taxes Due', bg='darkblue',
+           fg='white', font=('Arial', 12, 'bold'))
+e2 = Entry(frame3, borderwidth=5, bg='gray', font=14)
+l2.grid(row=4, column=0)
+e2.grid(row=4, column=1)
+
 
 
 mainloop()
